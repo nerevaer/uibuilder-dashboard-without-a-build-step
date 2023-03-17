@@ -16,14 +16,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #d10cad;
+  color: #14ad66;
 }
 .container {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-
+/*
 body {
   background: rgb(0, 0, 0);
   background-image: url("./resources/back5.jpg");
@@ -33,3 +33,4 @@ body {
   background-attachment: fixed;
   
 }
+*/

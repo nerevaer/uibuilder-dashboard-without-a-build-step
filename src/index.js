@@ -20,77 +20,13 @@
 
 /** @see https://totallyinformation.github.io/node-red-contrib-uibuilder/#/front-end-library */
 
-
-
 const Dashboard = httpVueLoader('./views/Dashboard.vue');
-const Sidebar = httpVueLoader('./components/Sidebar.vue');
-const Messages = httpVueLoader('./views/Messages.vue');
-const Overview = httpVueLoader('./views/Overview.vue');
-const routeDefs = [
-    {
-        path: '',
-        component: Dashboard,
-        children: [     
-            {
-              path: '',
-              components: {default: Dashboard, routeHeading: Sidebar},
-              children: [
-                {
-                  path: '/',
-                  components: {default: Dashboard, routeHeading: Overview}
-                },
-                {
-                  path: '/messages',
-                  components: {default: Dashboard, routeHeading: Messages}
-                }
-              ]
-            }
-
-
-]}]
-
-
-/**const routeDefs = [
-    {   path: '/',
-        name: 'homepage',
-        components: {default: navbar, routeHeading: homepage}
-    },
-    {   path: '/page1',
-        name: 'page1',
-        components: {default: navbar, routeHeading: page1},
-        children: [{
-                path: 'page1_history',
-                name: 'page1_history',
-                components: {default: navbar, routeHeading: page1_history}
-                }]
-    },
-    {   path: '/page2',
-        name: 'page2',
-        components: {default: navbar, routeHeading: page2}
-    },
-    {   path: '/Gribetz',
-        name: 'Gribetz',
-        components: {default: navbar, routeHeading: Quilters}
-    },
-    {   path: '/Mammut',
-        name: 'Mammut',
-        components: {default: navbar, routeHeading: Quilters},
-        props: {
-            string:"From Index",
-            number:  33,
-            value: "ochenta"
-        }
-    }
-]
-
-*/
 
 // eslint-disable-next-line no-unused-vars
 const app = new Vue({
     el: '#app',
-    router: new VueRouter({routes: routeDefs}),
     components: {
-        'Dashboard': Dashboard
+        'Dashboard': Dashboard,
     }, // --- End of components --- //
 
     data() { return {
